@@ -14,6 +14,17 @@ cd ./oomba-spa
 head "Installing Watchman"
 sh ./scripts/install-watchman.sh
 
-head "Building SPA"
+head "Installing Packages"
 # $(npm bin) build --profile --display-modules
-$(yarn) build --profile --display-modules
+yarn
+
+head "Generate Relay Files"
+yarn relay
+yarn graphql:definitions
+
+head "Build CSS Definitions"
+yarn build:definitions
+
+head "Compiling SPA"
+yarn build:angular
+yarn build
