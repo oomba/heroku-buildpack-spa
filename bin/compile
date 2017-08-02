@@ -15,4 +15,5 @@ head "Installing Watchman"
 sh ./scripts/install-watchman.sh
 
 head "Building SPA"
-$(npm bin) build --profile --display-modules
+# $(npm bin) build --profile --display-modules
+$(yarn) build --profile --display-modules
