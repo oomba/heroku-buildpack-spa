@@ -13,6 +13,8 @@ cd ./oomba-spa
 
 head "Installing Watchman"
 sh ./scripts/install-watchman.sh
+# Watchman is copied to node_modules/.bin in the install script
+export PATH="$PATH:$build_dir/oomba-spa/node_modules/.bin"
 
 head "Installing Packages"
 # $(npm bin) build --profile --display-modules
