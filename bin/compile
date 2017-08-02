@@ -8,13 +8,13 @@ env_dir=$3
 source $bp_dir/lib/common.sh
 
 export_env_dir $env_dir
-cd $build_dir
-cd ./oomba-spa
+cd $build_dir/oomba-spa
 
 head "Installing Watchman"
 sh ./scripts/install-watchman.sh
 # Watchman is copied to node_modules/.bin in the install script
 export PATH="$PATH:$build_dir/oomba-spa/node_modules/.bin"
+export PATH="$PATH:/tmp/watchman"
 
 head "Installing Packages"
 # $(npm bin) build --profile --display-modules
