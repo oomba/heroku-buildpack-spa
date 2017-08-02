@@ -11,8 +11,8 @@ export_env_dir $env_dir
 cd $build_dir
 cd ./oomba-spa
 
-# head "Installing Watchman"
-# sh ./scripts/install-watchman.sh
+head "Installing Watchman"
+sh ./scripts/install-watchman.sh
 
 head "Building SPA"
 $(npm bin) build --profile --display-modules

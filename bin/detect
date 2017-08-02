@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -f $1/oomba-spa ]; then
+if [ -d $1/oomba-spa ]; then
   echo "SPA buildpack"
   exit 0
 else
