@@ -17,7 +17,6 @@ export PATH="$PATH:$build_dir/oomba-spa/node_modules/.bin"
 export PATH="$PATH:/tmp/watchman"
 
 head "Installing Packages"
-# $(npm bin) build --profile --display-modules
 yarn
 
 head "Generate Relay Files"
